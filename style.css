@@ -1,0 +1,374 @@
+/* Coolors
+https://coolors.co/ffffff-000000-767676-5b00ff-000000
+
+/* Purple - dark
+https://coolors.co/5900ff-4a00d5-3b00aa-2d0080-1e0055-0f002b-000000
+*/
+
+/* Purple - light
+https://coolors.co/5900ff-752aff-9055ff-ac80ff-c8aaff-e3d5ff-ffffff
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap");
+
+/* QUICK RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*============
+  CUSTOM PROPS
+==============*/
+
+:root {
+  font-size: 62.5%;
+
+  /* COLOR */
+  --clr-purple: #5900ff;
+  --clr-purple-dark: #0f002b;
+  --clr-purple-light: #f1eaff;
+  --clr-white: #fff;
+  --clr-black: #000;
+
+  /* NAV */
+  --nav-height: 60px;
+
+  /* SCROLL */
+  scroll-behavior: smooth;
+}
+
+/*=========
+  HELPERS
+============*/
+
+/* COLORS */
+.bg-gradient {
+  background: hsla(261, 100%, 50%, 1);
+
+  background: linear-gradient(
+    135deg,
+    hsla(261, 100%, 50%, 0.8) 0%,
+    hsla(204, 77%, 76%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    135deg,
+    hsla(261, 100%, 50%, 0.8) 0%,
+    hsla(204, 77%, 76%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    135deg,
+    hsla(261, 100%, 50%, 0.8) 0%,
+    hsla(204, 77%, 76%, 1) 100%
+  );
+}
+
+/*=========
+  GLOBALS
+============*/
+
+body {
+  font-size: 1.6rem;
+
+  background: var(--clr-purple-dark);
+  background: linear-gradient(
+    90deg,
+    var(--clr-purple-dark) 0%,
+    var(--clr-black) 35%
+  );
+  color: var(--clr-purple-light);
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+/*===========
+  TYPOGRAPHY
+=============*/
+
+h2 {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+  color: var(--clr-purple-light);
+}
+
+p {
+  font-size: 1.8rem;
+  line-height: 1.6em;
+  color: var(--clr-white);
+  font-weight: 300;
+}
+
+q {
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: italic;
+  /* border: solid 2px lime; */
+  display: block;
+}
+
+.more-info {
+  padding: 2.4rem;
+  color: var(--clr-purple);
+  transition: all 0.4s ease-out;
+}
+
+.more-info:hover,
+.more-info:active,
+.more-info:focus {
+  color: var(--clr-purple-light);
+}
+
+/*===========
+    LAYOUT
+=============*/
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  /* border: solid 2px lime; */
+  margin-bottom: 12.8em;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  background: var(--clr-white);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: var(--nav-height);
+  top: 0;
+  left: 0;
+  transition: transform 0.2s;
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 9.8em;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+}
+
+/*===========
+  HEADER
+=============*/
+
+.header-img {
+  max-width: 100%;
+  height: 100vh;
+  background: url(img/tosin_header.jpeg) no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* Navigation */
+
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+}
+
+.nav-toggle {
+  margin-left: 3.6rem;
+  font-size: 2.4rem;
+  width: fit-content;
+  position: absolute;
+  left: 0%;
+  top: 25%;
+  color: var(--clr-purple-light);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 100ms ease-out;
+}
+
+.nav-toggle:hover,
+.nav-toggle:active,
+.nav-toggle:focus {
+  opacity: 1;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 1rem 0.5rem;
+}
+
+.logo-img {
+  width: 3rem;
+}
+
+.logo-word {
+  width: 9rem;
+}
+
+.nav-bar {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+.nav-bar ul {
+  margin: 0;
+  list-style: none;
+}
+
+.nav-bar li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.nav-bar a {
+  color: var(--clr-purple-0);
+  padding: 0.5rem 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+.nav-bar a:hover {
+  color: var(--clr-white);
+  border-bottom: 2px var(--clr-white) solid;
+}
+
+@media screen and (min-width: 600px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  .nav-bar {
+    all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-bar ul {
+    display: flex;
+  }
+
+  .nav-bar li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  .nav-bar a {
+    opacity: 1;
+    position: relative;
+  }
+
+  .nav-bar a::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: var(--clr-purple-0);
+    position: absolute;
+    top: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  .nav-bar a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+/*===========
+    MAIN
+=============*/
+
+.about {
+  margin-top: 12.8rem;
+}
+
+.section-img {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.section-text {
+  width: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-img,
+  .section-text {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-img,
+  .section-text {
+    width: 100%;
+  }
+
+  .section-img {
+    order: -1;
+    margin-bottom: 4.8rem;
+  }
+}
+
+/*===========
+  FOOTER
+=============*/
+
+footer {
+  margin-top: 4.6rem;
+  text-align: center;
+}
