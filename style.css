@@ -51,19 +51,19 @@ https://coolors.co/5900ff-752aff-9055ff-ac80ff-c8aaff-e3d5ff-ffffff
 
   background: linear-gradient(
     135deg,
-    hsla(261, 100%, 50%, 0.8) 0%,
+    hsla(261, 100%, 50%, 0.9) 0%,
     hsla(204, 77%, 76%, 1) 100%
   );
 
   background: -moz-linear-gradient(
     135deg,
-    hsla(261, 100%, 50%, 0.8) 0%,
+    hsla(261, 100%, 50%, 0.9) 0%,
     hsla(204, 77%, 76%, 1) 100%
   );
 
   background: -webkit-linear-gradient(
     135deg,
-    hsla(261, 100%, 50%, 0.8) 0%,
+    hsla(261, 100%, 50%, 0.9) 0%,
     hsla(204, 77%, 76%, 1) 100%
   );
 }
@@ -263,6 +263,15 @@ nav {
 .nav-bar a:hover {
   color: var(--clr-white);
   border-bottom: 2px var(--clr-white) solid;
+}
+
+/* ACTIVE STATES */
+.nav-bar--active {
+  transform: scale(1, 1);
+}
+
+.nav-bar--active a {
+  opacity: 1;
 }
 
 @media screen and (min-width: 600px) {
