@@ -74,13 +74,9 @@ https://coolors.co/5900ff-752aff-9055ff-ac80ff-c8aaff-e3d5ff-ffffff
 
 body {
   font-size: 1.6rem;
-
-  background: var(--clr-purple-dark);
-  background: linear-gradient(
-    90deg,
-    var(--clr-purple-dark) 0%,
-    var(--clr-black) 35%
-  );
+  background: linear-gradient(var(--clr-purple-dark), var(--clr-black));
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: var(--clr-purple-light);
 }
 
@@ -115,7 +111,7 @@ q {
   text-align: center;
   font-size: 1.8rem;
   font-style: italic;
-  padding: 4.8rem 0;
+  padding: 4.8rem;
   /* border: solid 2px lime; */
   display: block;
 }
@@ -143,6 +139,7 @@ main {
 
 section {
   /* border: solid 2px lime; */
+
   margin-bottom: 12.8em;
   display: flex;
   justify-content: space-between;
